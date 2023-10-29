@@ -87,6 +87,26 @@ const Units = ({
             <Grid item container className={classes.section} spacing={3}>
               <Grid item className={classes.textField}>
                 <Grid item>
+                  <FormControl fullWidth>
+                    <LabelledEditableSelect
+                      id="unitLink"
+                      name="unitLink"
+                      label="Unit Link"
+                      placeholder="Enter Unit Link"
+                      onChange={(value) =>
+                        formik.setFieldValue("unitLink", value)
+                      }
+                      value={formik.values.unitLink}
+                    />
+                  </FormControl>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid className={classes.textField}>
+            <Grid item container className={classes.section} spacing={3}>
+              <Grid item className={classes.textField}>
+                <Grid item>
                   <FileUploaderComponent
                     setFile={setFile}
                     file={file}

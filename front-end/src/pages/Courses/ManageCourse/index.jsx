@@ -49,6 +49,7 @@ const ManageCourse = ({ setOpenCreateCourse, openCreateCourse }) => {
       fileName: "",
       filePath: "",
       fileSize: "",
+      unitLink: "",
     },
 
     onSubmit: async (values) => {
@@ -82,6 +83,7 @@ const ManageCourse = ({ setOpenCreateCourse, openCreateCourse }) => {
     const values = formik.values;
     const obj = {
       unitName: values.unitName,
+      videoLink: values.unitLink,
       pdfFile: selectedFile,
     };
     setUnits([...units, obj]);

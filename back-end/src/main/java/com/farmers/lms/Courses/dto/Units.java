@@ -7,6 +7,8 @@ public class Units {
 
     private String unitName;
 
+    private String videoLink;
+
     private List<PdfFile> pdfFile = new ArrayList<>();
 
     public void setPdfFile(List<PdfFile> pdfFile) {
@@ -24,5 +26,13 @@ public class Units {
 
     public String getUnitName() {
         return unitName;
+    }
+
+    public String getVideoLink() {
+        return videoLink;
+    }
+
+    public void setVideoLink(String videoLink) {
+        this.videoLink = videoLink;
     }
 }

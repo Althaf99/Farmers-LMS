@@ -28,6 +28,8 @@ public class CourseAndFarmerDetails {
 
     private String unitName;
 
+    private String unitVideoLink;
+
 
     private String courseId;
 
@@ -140,5 +142,13 @@ public class CourseAndFarmerDetails {
 
     public void setFileSize(long fileSize) {
         this.fileSize = fileSize;
+    }
+
+    public String getUnitVideoLink() {
+        return unitVideoLink;
+    }
+
+    public void setUnitVideoLink(String unitVideoLink) {
+        this.unitVideoLink = unitVideoLink;
     }
 }

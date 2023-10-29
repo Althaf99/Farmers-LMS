@@ -44,6 +44,7 @@ public class CoursesService {
                 coursesObj.setFilePath(p.getFilePath());
                 coursesObj.setFileSize(p.getFileSize());
                 coursesObj.setCourseId(coursesDto.getCourseId());
+                coursesObj.setUnitVideoLink(u.getVideoLink());
                 newList.add(coursesObj);
             });
         });
@@ -66,7 +67,7 @@ public class CoursesService {
 
     public PdfFile savePdf(MultipartFile file, String courseId, String unitName) {
         // Save the file to a directory on the server's file system
-        String filePath = "/home/althaf/Desktop/" + file.getOriginalFilename();
+        String filePath = "/home/althaf/Documents/Projects/Farmers-LMS/" + file.getOriginalFilename();
         try {
             file.transferTo(new File(filePath));
         } catch (IOException e) {

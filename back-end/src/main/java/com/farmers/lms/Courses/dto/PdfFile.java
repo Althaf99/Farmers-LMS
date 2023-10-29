@@ -23,6 +23,16 @@ public class PdfFile {
 
     private String unitName;
 
+    private String unitVideoLink;
+
+    public String getUnitVideoLink() {
+        return unitVideoLink;
+    }
+
+    public void setUnitVideoLink(String unitVideoLink) {
+        this.unitVideoLink = unitVideoLink;
+    }
+
     public Long getId() {
         return id;
     }

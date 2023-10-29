@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import { useSnackbar } from "notistack";
@@ -39,11 +39,19 @@ const ListUnits = () => {
   const [fileDetails, setFileDetails] = useState([]);
   const [file, setFile] = useState(null);
 
+  const navigate = useNavigate();
+
   const { role } = useContext(AppContext);
 
   const { data: courseData } = useGetCourse({ courseId: id });
   const handleClick = (element) => {
-    UseDownloadFile(element.filePath, element.fileName);
+    console.log("element", element);
+
+    if (element.filePath && element.fileName) {
+      UseDownloadFile(element.filePath, element.fileName);
+    } else {
+      window.open(`${element.unitVideoLink}`, "_blank");
+    }
   };
 
   const courseDetails = courseData && courseData[0];

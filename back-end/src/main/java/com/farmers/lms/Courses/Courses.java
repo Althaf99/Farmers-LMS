@@ -27,6 +27,8 @@ public class Courses {
 
     private String unitName;
 
+    private  String unitVideoLink;
+
 
     private String courseId;
 
@@ -36,7 +38,13 @@ public class Courses {
 
     private long fileSize;
 
+    public String getUnitVideoLink() {
+        return unitVideoLink;
+    }
 
+    public void setUnitVideoLink(String unitVideoLink) {
+        this.unitVideoLink = unitVideoLink;
+    }
 
     public void setFileName(String fileName) {
         this.fileName = fileName;

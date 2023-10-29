@@ -101,6 +101,7 @@ public class FarmersService {
             courseAndFarmerDetailsObj.setPhoneNo(farmerDetails.get().getPhoneNo());
             courseAndFarmerDetailsObj.setUnitName(courseDetails.getUnitName());
             courseAndFarmerDetailsObj.setFarmerId(assignCourses.getFarmerId());
+            courseAndFarmerDetailsObj.setUnitVideoLink(courseDetails.getUnitVideoLink());
             courseAndFarmerDetailsRepo.save(courseAndFarmerDetailsObj);
         }));
 
